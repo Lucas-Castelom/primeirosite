@@ -1,0 +1,260 @@
+/* reset do css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+     background-color:#4169E1;
+      background-size: auto 100vh;
+      font-family: 'Source Code Pro', monospace;
+      height: 100vh;
+    }
+  
+    @media (min-width: 400px) {
+      body {
+        font-size: 18px;
+      }
+    }
+    
+    @media (min-width: 600px) {
+      body {
+        font-size: 22px;
+      }
+    }
+  
+  header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'Source Code Pro', monospace;
+  }
+  
+    .menu{
+      background-color: #90EE90;
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      z-index: 1;
+    }
+  
+    .menu ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    .menu li {
+      list-style: none;
+    }
+  
+    .menu a {
+      color: red;
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      transition: background-color 1.5s, color 1.5s;
+    }
+
+    .menu a:hover{
+      background-color: red;
+      color: white;
+    }
+    
+    a{
+      text-decoration: none;
+    }
+    a:hover{
+       text-decoration: underline;
+    }
+    
+    .titulo{
+      transform: scale(0.2) translateY(50vh);
+      opacity: 0;
+      animation: 1s ease 2s animacaoTitulo forwards;
+
+    }
+
+    @keyframes animacaoTitulo {
+      from {
+        transform: scale(0.2) translateY(50vh);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .site-title{
+      color: white;
+      text-align:center;
+      font-family: 'Abril Fatface', cursive;
+    }
+    .site-subtitle{
+      font-style: italic;
+      color: silver;
+      font-weight: lighter;
+      text-align: center;
+      font-size: 2em;
+      font-family: 'Monoton', cursive;
+      line-height: 1.8em;
+    }
+
+    .sobre,
+    .contato,
+    .Portfolio {
+      padding: 2em;
+      min-height: 80vh;
+    }
+
+    @media (min-width: 1200px){
+      .container{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+      }
+    }
+
+    .container img-sobre{
+      max-width: 200px;
+
+    }
+
+    .sobre h2,
+    .contato h2,
+    .Portfolio h2{
+      font-family: 'Monoton', cursive;
+      margin-bottom: 1.5em;
+      font-size: 1.8em;
+    }
+
+    .sobre p{
+      text-indent: 1.2em;
+      margin-bottom: 1.12em;
+      text-align: justify
+    }
+
+    .sobre a{
+      color: white;
+      text-decoration: underline;
+    }
+
+    .sobre a:hover{
+      background-color: red;
+      text-decoration: none;
+    }
+
+    .sobre .eu-mesmo{
+      float: right;
+      margin-left: 1.8em;
+    }
+
+    .sobre .eu-mesmo img{
+      clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 49% 100%, 50% 75%, 0% 75%);
+    }
+
+    .Portfolio .grid{
+      display: grid;
+      gap: 2em;
+    }
+
+    @media (min-width: 560px){
+      .Portfolio .grid{
+        grid-template-columns: 240px 240px ;
+      }
+    }
+
+    @media (min-width: 880px){
+      .Portfolio .grid{
+        grid-template-columns: repeat(2, 300px);
+        align-content: center;
+        justify-content: center;
+        height: calc(100vh - 4em - 48px - 1.5em);
+      }
+    }
+
+    .Certificados .grid{
+      display: grid;
+      gap: 2em;
+    }
+
+    @media (min-width: 560px){
+      .Certificados .grid{
+        grid-template-columns: 240px 240px ;
+      }
+    }
+
+    @media (min-width: 880px){
+      .certificado .grid{
+        grid-template-columns: repeat(2, 300px);
+        align-content: center;
+        justify-content: center;
+        height: calc(100vh - 4em - 48px - 1.5em);
+      }
+    }
+
+    .certificado figure {
+      text-align: center;
+    }
+
+    .img-certificado {
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
+      object-position: left bottom;
+      transition: transform 500ms;
+    }
+
+    .img-certificado:hover{
+      transform: scale(1.2) rotate(8deg)
+    }
+
+    .Portfolio figure {
+      text-align: center;
+    }
+    
+    .img-portfolio {
+      height: 180px;
+      width: 200px;
+      object-fit: cover;
+      border-radius: 10%;
+      object-position: left bottom;
+      transition: transform 500ms;
+    }
+
+    .img-portfolio:hover{
+      transform: scale(1.2) rotate(-3.5deg);
+    }
+
+    .e-mail .icon-email, 
+    .contato .icons{
+      text-align: center;
+    }
+
+    .icon-email a,
+    .contato a{
+      color: whitesmoke;
+      font-size: 5.4em;
+      transition: text-shadow 1.2s;
+    }
+
+    .icon-email a:active,
+    .icon-email a:hover,
+    .contato a:active,
+    .contato a:hover{
+      text-decoration: none;
+      text-shadow: 0px 0px 10px black;
+    }
+    
+    .e-mail a{
+      font-size: 1.2em;
+      font-family: 'Abril Fatface', cursive;
+    }
+
+   
+    
+    
+    
